@@ -1,17 +1,17 @@
-pipeline{
+	pipeline{
 	agent any
 
 	stages{
-		stage{('checkout')
+		stage('checkout'){
 			steps{
 				checkout scm
 			}}
-		stage{('build')
+		stage('build'){
 			steps{
 				sh '/home/dhairya/devops/apache-tomcat-8.5.99/bin/mvn install'
 			}}
-		stage{('Deployment')
-			step{
+		stage('Deployment'){
+			steps{
 				sh 'cp target/TestPipeline.war /home/dhairya/devops/apache-tomcat-8.5.99/webapps/'
 			}}
 		}
