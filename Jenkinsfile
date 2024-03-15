@@ -8,7 +8,7 @@
 			}}
 		stage('build'){
 			steps{
-				sh '/home/dhairya/devops/apache-tomcat-8.5.99/bin/mvn install'
+				sh '/home/dhairya/devops/apache-maven-3.9.6-bin/apache-maven-3.9.6/bin/mvn install'
 			}}
 		stage('Deployment'){
 			steps{
